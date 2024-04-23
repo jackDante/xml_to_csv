@@ -1,0 +1,147 @@
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output method="text" encoding="UTF-8"/>
+	<xsl:template match="/FatturaElettronica">
+		<xsl:for-each select="FatturaElettronica"> 
+		<!-- <xsl:sort select="CessionarioCommittente/DatiAnagrafici/CodiceFiscale"/> -->
+			<xsl:for-each select="FatturaElettronicaHeader">
+				<xsl:text>IdPaese ~</xsl:text>
+		    	<xsl:value-of select="DatiTrasmissione/IdTrasmittente/IdPaese" />
+	            <xsl:text>, IdCodice ~</xsl:text>
+	            <xsl:value-of select="DatiTrasmissione/IdTrasmittente/IdCodice" />
+	            <xsl:text>, ProgressivoInvio ~</xsl:text>
+	            <xsl:value-of select="DatiTrasmissione/ProgressivoInvio" />
+	            <xsl:text>, FormatoTrasmissione ~</xsl:text>
+	            <xsl:value-of select="DatiTrasmissione/FormatoTrasmissione" />
+	            <xsl:text>, CodiceDestinatario ~</xsl:text>
+	            <xsl:value-of select="DatiTrasmissione/CodiceDestinatario" />
+	            <xsl:text>, PECDestinatario ~</xsl:text>
+	            <xsl:value-of select="DatiTrasmissione/PECDestinatario" />
+	            <xsl:text>, IdPaese ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/DatiAnagrafici/IdFiscaleIVA/IdPaese" />
+	            <xsl:text>, IdCodice ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/DatiAnagrafici/IdFiscaleIVA/IdCodice" />
+	            <xsl:text>, CodiceFiscale ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/DatiAnagrafici/CodiceFiscale" />
+	            <xsl:text>, Denominazione ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/DatiAnagrafici/Anagrafica/Denominazione" />
+	            <xsl:text>, AlboProfessionale ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/DatiAnagrafici/AlboProfessionale" />
+	            <xsl:text>, ProvinciaAlbo ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/DatiAnagrafici/ProvinciaAlbo" />
+	            <xsl:text>, NumeroIscrizioneAlbo ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/DatiAnagrafici/NumeroIscrizioneAlbo" />
+	            <xsl:text>, DataIscrizioneAlbo ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/DatiAnagrafici/DataIscrizioneAlbo" />
+	            <xsl:text>, RegimeFiscale ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/DatiAnagrafici/RegimeFiscale" />
+	            <xsl:text>, Indirizzo ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/Sede/Indirizzo" />
+	            <xsl:text>, NumeroCivico ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/Sede/NumeroCivico" />
+	            <xsl:text>, CAP ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/Sede/CAP" />
+	            <xsl:text>, Comune ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/Sede/Comune" />
+	            <xsl:text>, Provincia ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/Sede/Provincia" />
+	            <xsl:text>, Nazione ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/Sede/Nazione" />
+	            <xsl:text>, Ufficio ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/IscrizioneREA/Ufficio" />
+	            <xsl:text>, NumeroREA ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/IscrizioneREA/NumeroREA" />
+	            <xsl:text>, SocioUnico ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/IscrizioneREA/SocioUnico" />
+	            <xsl:text>, StatoLiquidazione ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/IscrizioneREA/StatoLiquidazione" />
+	            <xsl:text>, Telefono ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/Contatti/Telefono" />
+	            <xsl:text>, Email ~</xsl:text>
+	            <xsl:value-of select="CedentePrestatore/Contatti/Email" />
+	            <xsl:text>, CodiceFiscale ~</xsl:text>
+	            <xsl:value-of select="CessionarioCommittente/DatiAnagrafici/CodiceFiscale" />
+	            <xsl:text>, Denominazione ~</xsl:text>
+	            <xsl:value-of select="CessionarioCommittente/DatiAnagrafici/Anagrafica/Denominazione" />
+	            <xsl:text>, SedeIndirizzo ~</xsl:text>
+	            <xsl:value-of select="CessionarioCommittente/Sede/Indirizzo" />
+	            <xsl:text>, NumeroCivico ~</xsl:text>
+	            <xsl:value-of select="CessionarioCommittente/Sede/NumeroCivico" />
+	            <xsl:text>, CAP ~</xsl:text>
+	            <xsl:value-of select="CessionarioCommittente/Sede/CAP" />
+	            <xsl:text>, Comune ~</xsl:text>
+	            <xsl:value-of select="CessionarioCommittente/Sede/Comune" />
+	            <xsl:text>, Provincia ~</xsl:text>
+	            <xsl:value-of select="CessionarioCommittente/Sede/Provincia" />
+	            <xsl:text>, Nazione ~</xsl:text>
+	            <xsl:value-of select="CessionarioCommittente/Sede/Nazione" />
+	            <xsl:text>, IdPaese ~</xsl:text>
+	            <xsl:value-of select="CessionarioCommittente/RappresentanteFiscale/IdFiscaleIVA/IdPaese" />
+	            <xsl:text>, IdCodice ~</xsl:text>
+	            <xsl:value-of select="CessionarioCommittente/RappresentanteFiscale/IdFiscaleIVA/IdCodice" />
+	            <xsl:text>, Nome ~</xsl:text>
+	            <xsl:value-of select="CessionarioCommittente/RappresentanteFiscale/Nome" />
+	            <xsl:text>, Cognome ~</xsl:text>
+	            <xsl:value-of select="CessionarioCommittente/RappresentanteFiscale/Cognome" />
+			</xsl:for-each>
+			<xsl:for-each select="FatturaElettronicaBody">
+	            <xsl:text>, TipoDocumento ~</xsl:text>
+	            <xsl:value-of select="DatiGenerali/DatiGeneraliDocumento/TipoDocumento" />
+	            <xsl:text>, Divisa ~</xsl:text>
+	            <xsl:value-of select="DatiGenerali/DatiGeneraliDocumento/Divisa" />
+	            <xsl:text>, Data ~</xsl:text>
+	            <xsl:value-of select="DatiGenerali/DatiGeneraliDocumento/Data" />
+	            <xsl:text>, Numero ~</xsl:text>
+	            <xsl:value-of select="DatiGenerali/DatiGeneraliDocumento/Numero" />
+	            <xsl:text>, TipoRitenuta ~</xsl:text>
+	            <xsl:value-of select="DatiGenerali/DatiGeneraliDocumento/DatiRitenuta/TipoRitenuta" />
+	            <xsl:text>, ImportoRitenuta ~</xsl:text>
+	            <xsl:value-of select="DatiGenerali/DatiGeneraliDocumento/DatiRitenuta/ImportoRitenuta" />
+	            <xsl:text>, AliquotaRitenuta ~</xsl:text>
+	            <xsl:value-of select="DatiGenerali/DatiGeneraliDocumento/DatiRitenuta/AliquotaRitenuta" />
+	            <xsl:text>, CausalePagamento ~</xsl:text>
+	            <xsl:value-of select="DatiGenerali/DatiGeneraliDocumento/DatiRitenuta/CausalePagamento" />
+	            <xsl:text>, ImportoTotaleDocumento ~</xsl:text>
+	            <xsl:value-of select="DatiGenerali/DatiGeneraliDocumento/ImportoTotaleDocumento" />
+	            <xsl:text>, NumeroLinea ~</xsl:text>
+	            <xsl:value-of select="DatiBeniServizi/DettaglioLinee/NumeroLinea" />
+	            <xsl:text>, Descrizione ~</xsl:text>
+	            <xsl:value-of select="normalize-space(translate(translate(DatiBeniServizi/DettaglioLinee/Descrizione, '&#10;', ' '), ',', ' '))" />	
+	            <xsl:text>, Quantita ~</xsl:text>
+	            <xsl:value-of select="DatiBeniServizi/DettaglioLinee/Quantita" />
+	            <xsl:text>, PrezzoUnitario ~</xsl:text>
+	            <xsl:value-of select="DatiBeniServizi/DettaglioLinee/PrezzoUnitario" />
+	            <xsl:text>, PrezzoTotale ~</xsl:text>
+	            <xsl:value-of select="DatiBeniServizi/DettaglioLinee/PrezzoTotale" />
+	            <xsl:text>, DettaglioLinee_AliquotaIVA ~</xsl:text>
+	            <xsl:value-of select="DatiBeniServizi/DettaglioLinee/AliquotaIVA" />
+	            <xsl:text>, Ritenuta ~</xsl:text>
+	            <xsl:value-of select="DatiBeniServizi/DettaglioLinee/Ritenuta" />
+	            <xsl:text>, DatiRiepilogo_AliquotaIVA ~</xsl:text>
+	            <xsl:value-of select="DatiBeniServizi/DatiRiepilogo/AliquotaIVA" />
+	            <xsl:text>, ImponibileImporto ~</xsl:text>
+	            <xsl:value-of select="DatiBeniServizi/DatiRiepilogo/ImponibileImporto" />
+	            <xsl:text>, Imposta ~</xsl:text>
+	            <xsl:value-of select="DatiBeniServizi/DatiRiepilogo/Imposta" />
+	            <xsl:text>, EsigibilitaIVA ~</xsl:text>
+	            <xsl:value-of select="DatiBeniServizi/DatiRiepilogo/EsigibilitaIVA" />
+	            <xsl:text>, CondizioniPagamento ~</xsl:text>
+	            <xsl:value-of select="DatiPagamento/CondizioniPagamento" />
+	            <xsl:text>, ModalitaPagamento ~</xsl:text>
+	            <xsl:value-of select="DatiPagamento/DettaglioPagamento/ModalitaPagamento" />
+	            <xsl:text>, DataScadenzaPagamento ~</xsl:text>
+	            <xsl:value-of select="DatiPagamento/DettaglioPagamento/DataScadenzaPagamento" />
+	            <xsl:text>, ImportoPagamento ~</xsl:text>
+	            <xsl:value-of select="DatiPagamento/DettaglioPagamento/ImportoPagamento" />
+	            <xsl:text>, IstitutoFinanziario ~</xsl:text>
+	            <xsl:value-of select="DatiPagamento/DettaglioPagamento/IstitutoFinanziario" />
+	            <xsl:text>, IBAN ~</xsl:text>
+	            <xsl:value-of select="DatiPagamento/DettaglioPagamento/IBAN" />            
+	            <xsl:text>, Allegato ~</xsl:text>
+	            <xsl:value-of select="Allegati/NomeAttachment" />
+	            <xsl:text>, Formato Allegato ~</xsl:text>
+	            <xsl:value-of select="Allegati/FormatoAttachment" />
+	            <xsl:text>&#10;</xsl:text>
+			</xsl:for-each>	
+		</xsl:for-each>
+	</xsl:template>
+</xsl:stylesheet>
